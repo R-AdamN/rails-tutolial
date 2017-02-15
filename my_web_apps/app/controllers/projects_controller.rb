@@ -11,8 +11,11 @@ def  new
 end
 def create
 	@project = Project.new(project_params)
-	@project.save
+	if @project.save
 	redirect_to projects_path
+	else
+	render 'new'
+	end
 end
 private
 
