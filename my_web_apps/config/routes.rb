@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :projects
+  root 'projects#index'
   resources :users
   resources :books
   get 'hello/index'
